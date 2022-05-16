@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link >
+    <title>search</title>
+</head>
+<body>
+<form action="" method="post">
+    <label>清晰搜索</label>
+    <input type="radio" id="Check" name="ServiceType" value="1">
+    <br/>
+    <label>模糊搜索</label>
+    <input type="radio" id="CheckBr" name="ServiceType" value="2" checked>
+    <br/>
+    <label>录入题目</label>
+    <input type="radio" id="Insert" name="ServiceType" value="3">
+    <br/>
+    <label>题目</label>
+    <input type="text" name="Title" value="" style="height: 50px;width: 600px;">
+    <br/>
+    <label>答案</label>
+    <input type="text" name="Anser" value="" style="height: 50px;width: 600px;">
+    <br/>
+    <input type="submit">
+</form>
+<div>
+    {% for key in content %}
+    <table border="1" width="1000">
+        <tr>
+            <td width="500">{{ key.title }}</td>
+            <td width="250">{{ key.ans }}</td>
+            <td width="50">{{ key.id }}</td>
+        </tr>
+    </table>
+    {% endfor %}
+</div>
+
+
+</body>
+</html>
